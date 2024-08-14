@@ -1,24 +1,17 @@
-import logo from './logo.svg';
+import React,{useState} from 'react';
+import NavBar from './components/Pages/NavBar/NavBar';
+import CartPage from './components/Cart/CartPage';
+import CartIcon from './components/Cart/CartIcon';
+import Categories from './components/Pages/NavBar/Categories';
+import ProductSection from './components/Pages/Home/ProductSection';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavBar CartPage={CartPage} CartIcon={CartIcon} CategoryPage={Categories}/>
+      <ProductSection/>
+    </>
   );
 }
 
